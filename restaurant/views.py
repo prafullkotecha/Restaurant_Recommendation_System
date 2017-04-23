@@ -1,8 +1,9 @@
-from .models import Restaurant
-from django .template import loader
-from django.shortcuts import render, get_object_or_404,redirect
 from django.contrib.auth import authenticate, login
-from .forms import CustomerForm
+from django.shortcuts import render
+from django.template import loader
+
+from .forms import RegistrationForm
+from .models import Restaurant
 
 
 def index(request):
@@ -23,7 +24,7 @@ def detail(request,Restaurant_id):
     return render(request,'restaurant/details.html',context)
 
 def CustomerRegister(request):
-    form = CustomerForm(request.POST or None)
+    form = RegistrationForm(request.POST or None)
     if form.is_valid():
         user = form.save(commit=False)
         username = form.cleaned_data['username']

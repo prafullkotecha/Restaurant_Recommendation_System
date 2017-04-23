@@ -2,10 +2,20 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title></title>
+    <title>Customer Registration</title>
+    {% include 'material/includes/material_css.html' %}
+    {% load static %}
+    <script src="{% static 'material/js/jquery-2.2.0.js' %}"></script>
+    {% include 'material/includes/material_js.html' %}
+    {% load material_form %}
+
 </head>
 <body>
-<h1> Hey!!! Finally I worked!!<h1>
+<form method="POST">{% csrf_token %}
+
+    {% form form=form %} {% endform %}
+    <button type="submit" name="_submit" class="btn btn-primary btn-lg">Submit</button>
+</form>
 
 </body>
 </html>

@@ -2,11 +2,15 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
+    {% include 'material/includes/material_css.html' %}
+    {% load static %}
+    <script src="{% static 'material/js/jquery-2.2.0.js' %}"></script>
+    {% include 'material/includes/material_js.html' %}
 
 </head>
 <body>
     {% for obj in allRestaurant %}
-        <h1> {{obj.name}} <h1>
+        <h1> {{ obj.name }} </h1>
         <p>Address: {{obj.full_address}} <br>
         City: {{obj.city}} <br>
         No of reviews: {{obj.review_count}} <br>
@@ -15,7 +19,7 @@
         Take Reservations:{{obj.Take_Reservations}}<br>
         Delivery:{{obj.Delivery}} <br>
         TV:  {{obj.Has_TV}} <br>
-        Outdoor Seating: {{obj.Outdoor_Seating}} <br>
+        Outdoor Seating: {{ obj.Outdoor_Seating }}<br>
         Attire: {{obj.Attire}} <br>
         Alcohol: {{obj.Alcohol}} <br>
         Water Service: {{obj.Water_service}} <br>
