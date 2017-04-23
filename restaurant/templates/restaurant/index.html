@@ -3,8 +3,12 @@
 <head>
     <meta charset="UTF-8">
     <title>This is my home page</title>
+    {% include 'material/includes/material_css.html' %}
+    {% load static %}
+    <script src="{% static 'material/js/jquery-2.2.0.js' %}"></script>
+    {% include 'material/includes/material_js.html' %}
 </head>
-<body background="http://finedinelove.com/wp-content/uploads/2015/10/dine.jpg">
+<body>
 <h1> This is my home page</h1>
 <ul>
     {% for Restaurant in allRestaurant %}
