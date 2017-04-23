@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>This is my home page</title>
+</head>
+<body background="http://finedinelove.com/wp-content/uploads/2015/10/dine.jpg">
+<h1> This is my home page</h1>
+<ul>
+    {% for Restaurant in allRestaurant %}
+    <li><a href="/restaurant/{{Restaurant.id}}/">{{ Restaurant.name}}</a></li>
+    {% endfor %}
+</ul>
+
+</body>
+</html>

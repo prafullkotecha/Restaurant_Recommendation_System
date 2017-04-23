@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+
+</head>
+<body>
+    {% for obj in allRestaurant %}
+        <h1> {{obj.name}} <h1>
+        <p>Address: {{obj.full_address}} <br>
+        City: {{obj.city}} <br>
+        No of reviews: {{obj.review_count}} <br>
+        Caters:{{obj.caters}}<br>
+        Noise Level:{{obj.Noise_level}}<br>
+        Take Reservations:{{obj.Take_Reservations}}<br>
+        Delivery:{{obj.Delivery}} <br>
+        TV:  {{obj.Has_TV}} <br>
+        Outdoor Seating: {{obj.Outdoor_Seating}} <br>
+        Attire: {{obj.Attire}} <br>
+        Alcohol: {{obj.Alcohol}} <br>
+        Water Service: {{obj.Water_service}} <br>
+        Credit Cards: {{obj.Accepts_Credit_card}} <br>
+        Kid Friendly: {{obj.good_for_kids}} <br>
+        Group: {{obj.good_for_groups}} <br>
+        Price Range: {{obj.price_range}} <br>
+        Type: {{obj.Type}} <br>
+    {% endfor %}
+</body>
+</html>
